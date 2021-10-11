@@ -1,12 +1,12 @@
 import { IOptions } from './md';
-import { backgroundColors, effects, fontColors, Reset } from './model';
-function addColor(text: string, color: string, isBackground = false) {
+import { backgroundColors, Colors, Effects, effects, fontColors, Reset } from './model';
+function addColor(text: string, color: Colors, isBackground = false) {
     if (isBackground) {
         return text + backgroundColors[color];
     }
     return text + fontColors[color];
 }
-function getEffects(effectList: Array<string>) {
+function getEffects(effectList: [Effects]) {
     return effectList.map(effect => effects[effect]).join('');
 }
 export function color(text: string, options: IOptions) {

@@ -1,13 +1,15 @@
 import { color } from './colors';
 
+import { Colors, Effects } from './model'
+
 export interface IOptions {
     bold?: boolean;
     italic?: boolean;
     mono?: boolean;
     link?: string;
-    font?: string;
-    background?: string;
-    effects?: Array<string>;
+    font?: Colors;
+    background?: Colors;
+    effects?: [Effects];
 }
 
 export function markdown(text: string, options: IOptions) {
