@@ -2,6 +2,7 @@ export const Reset = '\x1b[0m';
 
 export type Colors = 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white';
 export type Effects = 'bright' | 'dim' | 'italic' | 'underscore' | 'blink';
+export type BlackWhite = 'black' | 'white';
 
 export const effects: { [key in Effects]: string } = {
     bright: '\x1b[1m',
@@ -30,7 +31,7 @@ export const backgroundColors: { [key in Colors]: string } = {
     cyan: '\x1b[46m',
     white: '\x1b[47m',
 };
-export const contrast: { [key in Colors]: string } = {
+export const contrast: { [key in Colors]: BlackWhite } = {
     black: 'white',
     red: 'black',
     green: 'black',
